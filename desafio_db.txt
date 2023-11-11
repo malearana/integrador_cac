@@ -1,0 +1,21 @@
+Maria Alejandra Arana
+Trabajo Desafio BD
+
+2.1 SELECT apellido FROM `empleados`;
+2.2 SELECT DISTINCT apellido FROM `empleados`;
+2.3 SELECT * FROM `empleados` WHERE apellido='LOPEZ';
+2.4 SELECT * FROM `empleados` WHERE apellido='LOPEZ' or apellido='Perez';
+2.5 SELECT * FROM `empleados` WHERE cod_depto='14';
+2.6 SELECT * FROM `empleados` WHERE cod_depto='14' or cod_depto='37';
+2.7 SELECT * FROM `empleados` WHERE apellido like 'P%';
+2.8 SELECT sum(presupuesto) FROM `departamentos`;
+2.9 SELECT empleados.*, departamentos.nombre_depto FROM `empleados` left join departamentos 
+on empleados.cod_depto=departamentos.cod_depto;
+2.10 SELECT * FROM `empleados` left join departamentos on empleados.cod_depto=departamentos.cod_depto;
+2.11SELECT nombre,apellido FROM empleados e join departamentos d on e.cod_depto=d.cod_depto where d.presupuesto>60000;
+2.12 INSERT INTO `departamentos` (`cod_depto`, `nombre_depto`, `presupuesto`) VALUES ('11', 'Calidad', '40000');
+INSERT INTO `empleados` (`id_empleado`, `dni`, `nombre`, `apellido`, `cod_depto`, `fecha_alta`) VALUES (NULL, '89267109', 'Ester', 'Vazquez', '11', '2023-11-10');
+2.13 UPDATE departamentos SET presupuesto=presupuesto-(presupuesto*0.10);
+2.14  UPDATE empleados set cod_depto=14 where cod_depto=77
+2.15 DELETE * from empleados where cod_depto=14
+2.16 DELETE * from empleados join departamentos where presupuesto>90000
